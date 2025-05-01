@@ -149,10 +149,10 @@ if __name__ == "__main__":
 
             print(f"File: {filename} contains {len(text_chunks)} chunks.")
 
-            # Обробляємо по 15 шматків за раз
+
             batch_size = 15
             for i in range(0, len(text_chunks), batch_size):
-                batch = text_chunks[i:i + batch_size]  # Беремо наступні 15 шматків
+                batch = text_chunks[i:i + batch_size]  
                 print(f"Processing batch {i // batch_size + 1} with {len(batch)} chunks...")
                 for chunk in batch:
                     response = generate_questions_answers(chunk)
